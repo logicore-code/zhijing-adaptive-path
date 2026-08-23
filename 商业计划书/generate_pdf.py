@@ -15,6 +15,27 @@ from reportlab.platypus import (
     KeepTogether, Image
 )
 from reportlab.lib.enums import TA_CENTER, TA_LEFT, TA_JUSTIFY
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+
+# 注册中文字体（Windows 系统）
+def register_chinese_font():
+    """尝试注册中文字体"""
+    candidates = [
+        r"C:\Windows\Fonts\msyh.ttc",  # 微软雅黑
+        r"C:\Windows\Fonts\simhei.ttf",  # 黑体
+        r"C:\Windows\Fonts\simsun.ttc",  # 宋体
+    ]
+    for font_path in candidates:
+        if os.path.exists(font_path):
+            try:
+                pdfmetrics.registerFont(TTFont("ChineseFont", font_path))
+                return "ChineseFont"
+            except Exception as e:
+                print(f"  Failed to register {font_path}: {e}")
+    return "Helvetica"  # 兜底用英文字体
+
+CN_FONT = register_chinese_font()
 
 
 # ---------------------------------------------------------------------- #
@@ -48,7 +69,7 @@ title_style = ParagraphStyle(
     textColor=DARK,
     spaceAfter=20,
     alignment=TA_CENTER,
-    fontName="Helvetica-Bold",
+    fontName=CN_FONT,
 )
 h1_style = ParagraphStyle(
     "CustomH1",
@@ -57,7 +78,7 @@ h1_style = ParagraphStyle(
     textColor=PRIMARY,
     spaceBefore=20,
     spaceAfter=12,
-    fontName="Helvetica-Bold",
+    fontName=CN_FONT,
 )
 h2_style = ParagraphStyle(
     "CustomH2",
@@ -66,7 +87,7 @@ h2_style = ParagraphStyle(
     textColor=DARK,
     spaceBefore=15,
     spaceAfter=10,
-    fontName="Helvetica-Bold",
+    fontName=CN_FONT,
 )
 h3_style = ParagraphStyle(
     "CustomH3",
@@ -75,7 +96,7 @@ h3_style = ParagraphStyle(
     textColor=PRIMARY,
     spaceBefore=10,
     spaceAfter=8,
-    fontName="Helvetica-Bold",
+    fontName=CN_FONT,
 )
 body_style = ParagraphStyle(
     "CustomBody",
@@ -84,7 +105,7 @@ body_style = ParagraphStyle(
     textColor=DARK,
     leading=18,
     spaceAfter=6,
-    fontName="Helvetica",
+    fontName=CN_FONT,
     alignment=TA_JUSTIFY,
 )
 bullet_style = ParagraphStyle(
@@ -98,12 +119,12 @@ quote_style = ParagraphStyle(
     parent=body_style,
     leftIndent=30,
     textColor=GRAY,
-    fontName="Helvetica-Oblique",
+    fontName=CN_FONT,
 )
 code_style = ParagraphStyle(
     "CustomCode",
     parent=body_style,
-    fontName="Courier",
+    fontName=CN_FONT,
     fontSize=9,
     textColor=DARK,
     backColor=HexColor("#F3F4F6"),
@@ -152,7 +173,7 @@ def md_to_pdf_elements(md_text):
             t.setStyle(TableStyle([
                 ("BACKGROUND", (0, 0), (-1, 0), PRIMARY),
                 ("TEXTCOLOR", (0, 0), (-1, 0), HexColor("#FFFFFF")),
-                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("FONTNAME", (0, 0), (-1, -1), CN_FONT),
                 ("FONTSIZE", (0, 0), (-1, -1), 9),
                 ("ALIGN", (0, 0), (-1, -1), "LEFT"),
                 ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
