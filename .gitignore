@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# 测试覆盖率
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+
+# 项目特定
+data/students/memory.json
+*.log
+
+# Streamlit
+.streamlit/secrets.toml
+
+# 系统文件
+Thumbs.db
+desktop.ini
+
+# 大型模型权重（不提交）
+*.pt
+*.pth
+*.h5
+*.onnx
+checkpoints/

@@ -1,0 +1,234 @@
+{
+  "questions": [
+    {
+      "id": "q_lr_001",
+      "skill_id": "math_linear_algebra",
+      "stem": "若 A 是 3×4 矩阵，B 是 4×2 矩阵，则 A·B 的维度是？",
+      "options": ["3×2", "3×4", "4×4", "2×3"],
+      "answer": 0,
+      "explanation": "矩阵乘法维度：(m×n)·(n×p) = (m×p)，所以 3×4 · 4×2 = 3×2。",
+      "difficulty": 0.3,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_lr_002",
+      "skill_id": "math_linear_algebra",
+      "stem": "下面哪个不是矩阵的特征值性质？",
+      "options": ["特征向量非零", "特征值之和等于迹", "特征值之积等于行列式", "特征值一定为正数"],
+      "answer": 3,
+      "explanation": "特征值可以为复数、负数、零，没有'一定为正'的约束。",
+      "difficulty": 0.4,
+      "discrimination": 1.0
+    },
+    {
+      "id": "q_lreg_001",
+      "skill_id": "ml_linear_regression",
+      "stem": "线性回归中，最小二乘法的目标是？",
+      "options": ["最大化预测值", "最小化残差平方和", "最小化预测值方差", "最小化参数个数"],
+      "answer": 1,
+      "explanation": "最小二乘法的目标是最小化残差的平方和 Σ(y - ŷ)²。",
+      "difficulty": 0.25,
+      "discrimination": 1.3
+    },
+    {
+      "id": "q_lreg_002",
+      "skill_id": "ml_linear_regression",
+      "stem": "线性回归的正规方程是？",
+      "options": ["θ = (X^T X) X^T y", "θ = (X^T X)^{-1} X^T y", "θ = X^T y", "θ = (X X^T)^{-1} y"],
+      "answer": 1,
+      "explanation": "正规方程：θ = (X^T X)^{-1} X^T y。",
+      "difficulty": 0.35,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_logreg_001",
+      "skill_id": "ml_logistic_regression",
+      "stem": "逻辑回归使用什么函数将线性输出映射到 (0,1)？",
+      "options": ["ReLU", "Sigmoid", "Tanh", "Softmax"],
+      "answer": 1,
+      "explanation": "Sigmoid 函数 σ(z) = 1/(1+e^{-z}) 将实数映射到 (0,1)，表示概率。",
+      "difficulty": 0.3,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_logreg_002",
+      "skill_id": "ml_logistic_regression",
+      "stem": "逻辑回归的损失函数是？",
+      "options": ["MSE", "交叉熵 (Cross-Entropy)", "Hinge Loss", "MAE"],
+      "answer": 1,
+      "explanation": "逻辑回归使用交叉熵损失（对数损失），比 MSE 收敛更快、梯度更稳定。",
+      "difficulty": 0.4,
+      "discrimination": 1.0
+    },
+    {
+      "id": "q_dt_001",
+      "skill_id": "ml_decision_tree",
+      "stem": "ID3 决策树使用什么指标选择特征？",
+      "options": ["Gini 指数", "信息增益", "信息增益率", "均方误差"],
+      "answer": 1,
+      "explanation": "ID3 使用信息增益；C4.5 使用信息增益率；CART 使用 Gini 指数。",
+      "difficulty": 0.35,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_dt_002",
+      "skill_id": "ml_decision_tree",
+      "stem": "决策树的剪枝是为了？",
+      "options": ["加快训练", "减少过拟合", "提高训练集准确率", "增加树的深度"],
+      "answer": 1,
+      "explanation": "剪枝通过去掉不重要的分支减少过拟合，提高泛化能力。",
+      "difficulty": 0.3,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_svm_001",
+      "skill_id": "ml_svm",
+      "stem": "SVM 中核函数的作用是？",
+      "options": ["降低维度", "将数据映射到高维空间使其线性可分", "增加数据", "减少计算量"],
+      "answer": 1,
+      "explanation": "核函数将低维不可分的数据映射到高维空间使其线性可分，避免显式计算高维映射。",
+      "difficulty": 0.45,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_ens_001",
+      "skill_id": "ml_ensemble",
+      "stem": "Random Forest 属于？",
+      "options": ["Boosting", "Bagging", "Stacking", "Cascading"],
+      "answer": 1,
+      "explanation": "Random Forest 是 Bagging 的代表，通过 bootstrap 抽样训练多棵决策树并投票。",
+      "difficulty": 0.4,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_ens_002",
+      "skill_id": "ml_ensemble",
+      "stem": "XGBoost 属于？",
+      "options": ["Bagging", "Boosting", "Stacking", "Voting"],
+      "answer": 1,
+      "explanation": "XGBoost 是 Boosting 的代表，基于梯度提升决策树 (GBDT)。",
+      "difficulty": 0.45,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_nn_001",
+      "skill_id": "dl_perceptron",
+      "stem": "下面哪个不是常用的激活函数？",
+      "options": ["ReLU", "Sigmoid", "Tanh", "Fourier"],
+      "answer": 3,
+      "explanation": "Fourier 不是激活函数。常用激活函数：ReLU、Sigmoid、Tanh、Softmax。",
+      "difficulty": 0.2,
+      "discrimination": 1.3
+    },
+    {
+      "id": "q_bp_001",
+      "skill_id": "dl_backprop",
+      "stem": "反向传播算法基于？",
+      "options": ["贝叶斯定理", "链式法则", "中心极限定理", "大数定律"],
+      "answer": 1,
+      "explanation": "反向传播是链式法则在神经网络中的系统应用，从输出层向输入层逐层计算梯度。",
+      "difficulty": 0.35,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_bp_002",
+      "skill_id": "dl_backprop",
+      "stem": "梯度消失的原因是？",
+      "options": ["学习率太大", "激活函数饱和导致梯度趋近于 0", "数据太少", "参数太多"],
+      "answer": 1,
+      "explanation": "Sigmoid/Tanh 在饱和区梯度接近 0，深层网络中累乘导致梯度消失。",
+      "difficulty": 0.5,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_cnn_001",
+      "skill_id": "dl_cnn",
+      "stem": "CNN 中池化层的作用是？",
+      "options": ["增加特征图", "降低空间分辨率，提取主要特征", "全连接", "非线性激活"],
+      "answer": 1,
+      "explanation": "池化（最大/平均）降低空间分辨率，保留主要特征，减少参数与计算量。",
+      "difficulty": 0.35,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_rnn_001",
+      "skill_id": "dl_rnn",
+      "stem": "LSTM 通过什么机制解决长期依赖？",
+      "options": ["更深的网络", "遗忘门、输入门、输出门", "更大的 batch", "更小的学习率"],
+      "answer": 1,
+      "explanation": "LSTM 通过遗忘门、输入门、输出门控机制控制信息流，缓解梯度消失。",
+      "difficulty": 0.4,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_tr_001",
+      "skill_id": "dl_transformer",
+      "stem": "Transformer 的核心是？",
+      "options": ["卷积", "自注意力机制 (Self-Attention)", "循环", "池化"],
+      "answer": 1,
+      "explanation": "Self-Attention 让每个位置都能关注到所有其他位置，是 Transformer 的核心。",
+      "difficulty": 0.4,
+      "discrimination": 1.3
+    },
+    {
+      "id": "q_tr_002",
+      "skill_id": "dl_transformer",
+      "stem": "为什么 Transformer 需要位置编码？",
+      "options": ["加快训练", "Self-Attention 本身不感知位置", "节省内存", "支持并行"],
+      "answer": 1,
+      "explanation": "Self-Attention 是置换不变的（permutation invariant），需要位置编码注入顺序信息。",
+      "difficulty": 0.5,
+      "discrimination": 1.1
+    },
+    {
+      "id": "q_nlp_001",
+      "skill_id": "nlp_basic",
+      "stem": "词袋模型 (BoW) 的主要缺点是？",
+      "options": ["不能处理中文", "忽略词序与上下文", "维度太低", "不支持分类"],
+      "answer": 1,
+      "explanation": "词袋模型只统计词频，忽略词序和上下文，无法捕捉语义。",
+      "difficulty": 0.3,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_pretrain_001",
+      "skill_id": "nlp_pretrain",
+      "stem": "BERT 是哪种类型的预训练模型？",
+      "options": ["自回归 (GPT)", "自编码 (BERT)", "自回归+编码 (T5)", "纯监督"],
+      "answer": 1,
+      "explanation": "BERT 是自编码预训练，通过掩码语言模型 (MLM) 学习双向上下文。",
+      "difficulty": 0.45,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_rl_001",
+      "skill_id": "rl_basic",
+      "stem": "MDP 中的 M 代表？",
+      "options": ["Memory", "Markov", "Model", "Modular"],
+      "answer": 1,
+      "explanation": "MDP = Markov Decision Process，马尔可夫决策过程。",
+      "difficulty": 0.2,
+      "discrimination": 1.3
+    },
+    {
+      "id": "q_agent_001",
+      "skill_id": "llm_agent",
+      "stem": "ReAct 框架中 'ReA' 代表？",
+      "options": ["Reason + Act", "Read + Answer", "Recall + Apply", "Rewrite + Abstract"],
+      "answer": 0,
+      "explanation": "ReAct = Reason + Act，推理与行动交替进行。",
+      "difficulty": 0.3,
+      "discrimination": 1.2
+    },
+    {
+      "id": "q_eth_001",
+      "skill_id": "ethics_ai",
+      "stem": "AI 系统应避免因训练数据导致对特定群体的不公平，这属于？",
+      "options": ["可解释性", "公平性", "可重复性", "鲁棒性"],
+      "answer": 1,
+      "explanation": "AI 伦理核心原则之一是公平性 (Fairness)，避免偏见与歧视。",
+      "difficulty": 0.2,
+      "discrimination": 1.3
+    }
+  ]
+}
