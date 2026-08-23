@@ -703,22 +703,22 @@ add_section_title(slide, "07 团队与未来", "高校背景 + 多学科交叉")
 
 # 团队成员
 members = [
-    ("👨‍💼", "主负责人", "整体战略与商务", "高校 / 商科", PRIMARY),
-    ("👨‍💻", "技术负责人", "核心架构", "高校 / CS", SECONDARY),
-    ("🧠", "AI 算法负责人", "认知诊断 + RL", "高校 / AI", ACCENT),
-    ("📚", "教育学顾问", "认知科学理论", "高校 / 教育", RGBColor(0x8B, 0x5C, 0xF6)),
-    ("🎨", "产品负责人", "用户体验", "高校 / 设计", RED),
+    ("👨‍💼", "蒋泽宇", "主负责人 / 整体架构", "项目主导 + CSN 架构", PRIMARY),
+    ("👨‍💻", "汪枳航", "核心技术 / 算法实现", "BKT/DKT/IRT + 知识图谱", SECONDARY),
+    ("📚", "谷昊洋", "教育理论 / 教学设计", "ZPD + Bloom + 脚手架", ACCENT),
+    ("🛠️", "王一维", "工程实现 / 测试", "Web Demo + 单元测试", RGBColor(0x8B, 0x5C, 0xF6)),
+    ("📊", "孙布赫", "商业模式 / 文档", "TAM/SAM/SOM + 计划书", RED),
 ]
-for i, (avatar, role, area, bg, color) in enumerate(members):
+for i, (avatar, name, role, area, color) in enumerate(members):
     x = Inches(0.4 + i * 2.55)
     add_card(slide, x, Inches(2.0), Inches(2.4), Inches(2.5), fill=LIGHT)
-    add_text_box(slide, x, Inches(2.2), Inches(2.4), Inches(0.8), avatar, size=42, color=color, align=PP_ALIGN.CENTER)
-    add_text_box(slide, x, Inches(3.0), Inches(2.4), Inches(0.4), role, size=14, color=color, bold=True, align=PP_ALIGN.CENTER)
-    div = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x + Inches(0.4), Inches(3.5), Inches(1.6), Inches(0.02))
+    add_text_box(slide, x, Inches(2.1), Inches(2.4), Inches(0.6), avatar, size=36, color=color, align=PP_ALIGN.CENTER)
+    add_text_box(slide, x, Inches(2.75), Inches(2.4), Inches(0.4), name, size=18, color=color, bold=True, align=PP_ALIGN.CENTER)
+    div = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, x + Inches(0.4), Inches(3.2), Inches(1.6), Inches(0.02))
     set_fill(div, color)
     set_no_outline(div)
-    add_text_box(slide, x + Inches(0.1), Inches(3.6), Inches(2.2), Inches(0.4), area, size=11, color=DARK, align=PP_ALIGN.CENTER)
-    add_text_box(slide, x + Inches(0.1), Inches(4.0), Inches(2.2), Inches(0.4), bg, size=10, color=GRAY, align=PP_ALIGN.CENTER)
+    add_text_box(slide, x + Inches(0.1), Inches(3.3), Inches(2.2), Inches(0.5), role, size=11, color=DARK, align=PP_ALIGN.CENTER)
+    add_text_box(slide, x + Inches(0.1), Inches(3.85), Inches(2.2), Inches(0.5), area, size=10, color=GRAY, align=PP_ALIGN.CENTER)
 
 # 路线图
 add_text_box(slide, Inches(0.5), Inches(4.8), Inches(12.3), Inches(0.4), "🗺️ 发展路线图", size=18, color=DARK, bold=True, align=PP_ALIGN.CENTER)
