@@ -296,8 +296,7 @@ LLM 不可解释、不可复现、成本高。智径只在以下场景使用 LLM
 │   ├── test_cognitive.py
 │   ├── test_knowledge.py
 │   └── test_agents.py
-├── 商业计划书/                    # 商业计划书
-└── 演示视频脚本/                  # 视频脚本
+├── 商业计划书/                    # 商业计划书 + 路演 PPT
 ```
 
 ---

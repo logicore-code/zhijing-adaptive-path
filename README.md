@@ -126,8 +126,7 @@
 ├── demo/                              # Web Demo
 ├── docs/                              # 架构文档
 ├── tests/                             # 测试
-├── 商业计划书/                         # 提交材料
-└── 演示视频脚本/                       # 视频脚本
+├── 商业计划书/                         # 提交材料（商业计划书 + 路演 PPT）
 ```
 
 ---
@@ -157,7 +156,6 @@ python src/main.py --mode cli
 | 商业计划书 | 智径-AdaptivePath-商业计划书.pdf | `商业计划书/` |
 | 源代码 | 完整项目 | 根目录 |
 | 演示 Demo | Streamlit Web App | `demo/app.py` |
-| 演示视频脚本 | 3 分钟路演脚本 | `演示视频脚本/` |
 | 架构文档 | 系统设计文档 | `docs/architecture.md` |
 
 ---
