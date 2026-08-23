@@ -291,7 +291,7 @@ LLM 不可解释、不可复现、成本高。智径只在以下场景使用 LLM
 │       └── vector_store.py
 ├── demo/
 │   ├── app.py                    # Streamlit Web Demo
-│   └── verify_system.py          # 验证脚本
+│   └── run_demo.py               # 端到端运行示例
 ├── tests/                        # 测试
 │   ├── test_cognitive.py
 │   ├── test_knowledge.py
@@ -314,7 +314,7 @@ python tests/test_agents.py
 ### 6.2 端到端验证
 
 ```bash
-python demo/verify_system.py
+python demo/run_demo.py
 ```
 
 ### 6.3 拟评测指标（决赛演示）

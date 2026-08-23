@@ -68,7 +68,7 @@ def verify():
     print("=" * 70)
     print("  系统端到端验证")
     print("=" * 70)
-    run_command("py -3 demo/verify_system.py", shell=True)
+    run_command("py -3 demo/run_demo.py", shell=True)
 
 
 def main():

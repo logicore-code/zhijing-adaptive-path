@@ -1,7 +1,14 @@
 """
-完整系统验证脚本
-=================
-跑一遍主流程，确认所有模块能协同工作。
+端到端示例：完整学习闭环
+============================
+
+一个简单的端到端运行示例，展示 Orchestrator 如何协同五大智能体完成：
+- 启动会话 + 路径规划
+- 多轮对话与学情诊断
+- 学习报告与反思总结
+
+运行：
+    python demo/run_demo.py
 """
 import sys
 sys.path.insert(0, '.')
@@ -11,7 +18,7 @@ from src.agents import Orchestrator
 
 def main():
     print("=" * 70)
-    print("  智径 AdaptivePath - 完整系统验证")
+    print("  智径 AdaptivePath - 端到端运行示例")
     print("=" * 70)
 
     orch = Orchestrator()

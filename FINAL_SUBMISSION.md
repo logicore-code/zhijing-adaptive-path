@@ -66,7 +66,7 @@
 | 文件 | 说明 | 启动命令 |
 | --- | --- | --- |
 | `demo/app.py` | Streamlit Web Demo | `py run.py demo` |
-| `demo/verify_system.py` | 端到端验证脚本 | `py demo/verify_system.py` |
+| `demo/run_demo.py` | 端到端运行示例 | `py demo/run_demo.py` |
 
 **Web Demo 6 个页面**：
 1. 🏠 主页对话 - 苏格拉底式对话

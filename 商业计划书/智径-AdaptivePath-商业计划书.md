@@ -595,8 +595,8 @@ python tests/test_cognitive.py
 python tests/test_knowledge.py
 python tests/test_agents.py
 
-# 端到端验证
-python demo/verify_system.py
+# 端到端示例
+python demo/run_demo.py
 
 # 启动 Web Demo
 streamlit run demo/app.py
