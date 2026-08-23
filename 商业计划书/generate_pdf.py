@@ -246,7 +246,7 @@ doc = SimpleDocTemplate(
     topMargin=2*cm,
     bottomMargin=2*cm,
     title="智径 AdaptivePath 商业计划书",
-    author="智径团队",
+    author="崇理团队",
 )
 
 elements = md_to_pdf_elements(md_text)

@@ -154,7 +154,7 @@ add_text_box(slide, Inches(0.5), Inches(4.2), Inches(12), Inches(0.5), "Multi-Ag
 info = [
     ("赛道", "科大讯飞 AI 开发者大赛 · 自适应学习路径决策与伴学智能体"),
     ("作品类型", "AI Agent + 教育认知科学"),
-    ("团队", "[待填]"),
+    ("团队", "崇理团队"),
     ("日期", "2026 年 8 月"),
 ]
 for i, (k, v) in enumerate(info):
@@ -769,9 +769,7 @@ add_text_box(slide, Inches(1.0), Inches(5.0), Inches(11.3), Inches(0.6),
 
 # 联系信息
 add_text_box(slide, Inches(0.5), Inches(6.3), Inches(12.3), Inches(0.4),
-             "GitHub: github.com/[team]/adaptive-path    ·    团队: 智径团队    ·    学校: [待填]", size=14, color=GRAY, align=PP_ALIGN.CENTER)
-add_text_box(slide, Inches(0.5), Inches(6.7), Inches(12.3), Inches(0.4),
-             "邮箱: [email]    ·    QQ: [qq]", size=12, color=GRAY, align=PP_ALIGN.CENTER)
+             "GitHub: github.com/logicore-code/zhijing-adaptive-path    ·    GitCode: gitcode.com/jiangzeyu-2026/zhijing-adaptive-path    ·    团队: 崇理团队", size=12, color=GRAY, align=PP_ALIGN.CENTER)
 
 
 # ---------------------------------------------------------------------- #
